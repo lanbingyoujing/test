@@ -1,0 +1,213 @@
+*{
+    color: #555;
+    margin:0;
+    padding:0;
+    font-family: "Microsoft Yahei";
+}
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: #333;
+}
+
+header{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:50px;
+    background: rgb(0,0,0);
+}
+/*导航栏    开始*/
+nav{
+    width:100%;
+    height:50px;
+    background: #ccc;
+    z-index: 100;
+}
+nav .logo{
+    float: left;
+    margin-left:20px;
+    line-height: 50px;
+
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+nav .logo a{
+    color: #fff;
+}
+nav ul{
+    float: right;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 50px;
+    margin-right:20px;
+}
+nav ul li a{
+    display: inline-block;
+    height:50px;
+    line-height:50px;
+    color: #fff;
+}
+
+/*导航栏    结束*/
+
+.wrap{
+    width:100%;
+    height:600px;
+    position: absolute;
+    top:50%;
+    margin-top:-295px;
+    background: #333;
+    overflow: hidden;
+    -webkit-perspective:800px;          /*增加3d效果*/
+}
+/*海报样式    开始*/
+.photo{
+    width:260px;
+    height:320px;
+    position: absolute;
+    z-index: 1;
+    transition: all .5s;
+}
+.photo .side{
+    position: absolute;
+    top:0;
+    right:0;
+    width:100%;
+    height:100%;
+    background: #eee;
+    padding:20px;
+    box-sizing: border-box;
+}
+.photo .side-front .image{
+    width:100%;
+    height:250px;
+    line-height: 250px;
+    overflow: hidden;
+}
+.photo .side-front .image img{
+    width:100%;
+}
+.photo .side-front .caption{
+    text-align: center;
+    font-size: 16px;
+    line-height: 50px;
+}
+.photo .side-back .desc{
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/*当前选中的海报样式   开始*/
+.photo-center {
+    width:260px;
+    height:320px;
+    left:50%!important;
+    top:50%!important;
+    margin:-160px 0 0 -130px!important;
+    z-index: 999 !important;
+    transform: rotate(0deg) !important;
+}
+/*当前选中的海报样式   结束*/
+
+/*负责旋转   开始*/
+.photo-wrap{
+    position: absolute;
+    width:100%;
+    height:100%;
+    border:1px solid #999;
+    -webkit-transform-style:preserve-3d;        /*变成3d盒子*/
+    -webkit-transition: all .4s;
+}
+.photo-wrap .side-front{
+    -webkit-transform: rotateY(0deg);
+}
+.photo-wrap .side-back{
+    -webkit-transform: rotateY(180deg);
+}
+.photo-wrap .side{
+    -webkit-backface-visibility: hidden;            /*当元素不面向屏幕时，隐藏*/
+}
+.photo-front .photo-wrap{
+    -webkit-transform: rotateY(0deg);
+}
+.photo-back .photo-wrap{
+    -webkit-transform: rotateY(180deg);
+}
+/*负责旋转   结束*/
+/*海报样式    结束*/
+
+
+
+
+/*点击按钮区域     开始*/
+.wrap .list{
+    position: absolute;
+    bottom:30px;
+    left:50%;
+    margin-left:-150px;
+    width:350px;
+    height:20px;
+    line-height: 20px;
+    z-index: 100;
+    padding:0;
+    -webkit-perspective:800px;
+    font-size: 0;
+    text-align: center;
+}
+.wrap .list li{
+    position: relative;
+    display: inline-block;
+    width:15px;
+    height:15px;
+    margin:0 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    -webkit-transform-style:preserve-3d;
+    -webkit-transition: all .4s;
+}
+.li-front{
+    -webkit-transform: rotateY(0deg);
+}
+.li-back{
+    -webkit-transform: rotateY(180deg);
+}
+.wrap .list li .span-style{
+    left:-3px;
+    top:-3px;
+    width:20px;
+    height:20px;
+    background: transparent url(../img/right.png) no-repeat center !important;
+    background-size: 25px !important;
+}
+.wrap .list li span{
+    position: absolute;
+    left:0;
+    top:0;
+    display: block;
+    width:15px;
+    height:15px;
+    border-radius: 10px;
+    -webkit-backface-visibility: hidden;
+}
+.wrap .list li .list-front{
+    background: #eee;
+    -webkit-transform: rotateY(0deg);
+}
+.wrap .list li .list-back{
+    background: url(../img/left.png) no-repeat center/25px !important;
+    -webkit-transform: rotateY(180deg);
+}
+/*点击按钮区域     结束*/
+
+.ddd{
+    width:1000px;
+    height:1000px;
+    background: #000;
+}
