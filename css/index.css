@@ -1,0 +1,255 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: "Microsoft Yahei";
+}
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: #333;
+}
+/*公用区域    开始*/
+.clear::after{
+    content: '';
+    display: block;
+    clear: both;
+    overflow: hidden;
+    height:0;
+}
+/*公用区域    结束*/
+
+
+body,html{
+    width:100%;
+    height:100%;
+}
+.main-wrapper{
+    width:100%;
+    height:100%;
+    background: url(../img/banner6.jpg) no-repeat center center/cover fixed;
+}
+
+/*头部   开始*/
+header{
+    height:100%;
+    background: rgba(0,0,0,0.2);
+}
+/*导航栏    开始*/
+nav{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:50px;
+    background: #ccc;
+    z-index: 100;
+}
+nav .logo{
+    float: left;
+    margin-left:20px;
+    line-height: 50px;
+
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+nav .logo a{
+    color: #fff;
+}
+nav ul{
+    float: right;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 50px;
+    margin-right:20px;
+}
+nav ul li a{
+    display: inline-block;
+    height:50px;
+    line-height:50px;
+    color: #fff;
+}
+
+/*导航栏    结束*/
+#banner .inner{
+    position: relative;
+    top:160px;
+    max-width:300px;
+    text-align: center;
+    margin:0 auto;
+}
+
+#banner .inner h1{
+    width:200px;
+    margin:0 auto;
+    border-top: 2px solid #ddd;
+    border-bottom: 2px solid #ddd;
+    padding:10px 0;
+    color: #ddd;
+}
+.sub-heading{
+    line-height: 25px;
+    margin:20px;
+    color: #ddd;
+}
+#banner .inner button{
+    border:none;
+    background: #18a;
+    color: #eee;
+    padding:10px 50px;
+}
+#banner .inner .more{
+    margin-top:250px;
+    color: #fff;
+}
+/*头部   结束*/
+
+
+
+
+
+/*内容    开始*/
+/*绿色部分   开始*/
+.wrapper{
+    max-width:1080px;
+    margin:0 auto;
+}
+.green-section{
+    text-align: center;
+    background: #089db0;
+    color: #fff;
+    padding:100px 0;
+}
+.hr{
+    width:60%;
+    height:2px;
+    margin: 20px auto;
+    background: #078494;
+}
+.green-section .icon-group{
+    margin-top:20px;
+}
+.green-section .icon-group .icon{
+    display: inline-block;
+    width:80px;
+    height:80px;
+    background: #0d6f7c;
+    transform:rotate(45deg);
+    margin:20px;;
+}
+/*绿色部分   结束*/
+
+
+/*灰色部分   开始*/
+.gray-section{
+    background: rgb(0,0,0);
+    color: #fff;
+}
+
+.article-preview {
+    width:100%;
+    font-size: 0;
+}
+.article-preview:nth-child(odd){
+    background: rgba(255,255,255,0.15);
+}
+.article-preview>div{
+    float: left;
+}
+ .img-section{
+    width:45%;
+}
+ .img-section img{
+    width:100%;
+}
+.text-section{
+    width:55%;
+    padding:69px 0 0 50px;
+    top: 69px;
+    left:50px;
+    box-sizing: border-box;
+}
+.text-section h2{
+    margin-bottom:20px;
+    font-size: 24px;
+}
+.text-section p{
+    font-size: 18px;
+    margin-left:0;
+}
+/*灰色部分   结束*/
+
+
+
+/*紫色部分   开始*/
+.purple-section{
+    padding:80px;
+    background: #3f3965;
+    color: #fff;
+}
+.purple-section .header-wrapper{
+    text-align: center;
+    margin-bottom:60px;
+}
+.purple-section .header-wrapper .sub-heading{
+    margin:20px 0;
+}
+.purple-section .hr{
+    background: #373259;
+}
+
+.card{
+    float: left;
+    width:50%;
+    height:300px;
+    padding:50px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.card h3{
+    margin-bottom: 20px;
+}
+.card:first-child{
+    background: rgba(0,0,0,0.05);
+}
+.card:nth-child(2){
+    background: rgba(0,0,0,0.09);
+}
+.card:nth-child(3){
+    background: rgba(0,0,0,0.13);
+}
+.card:nth-child(4){
+    background: rgba(0,0,0,0.017);
+}
+.card:nth-child(5){
+    background: rgba(0,0,0,0.21);
+}
+.card:nth-child(6){
+    background: rgba(0,0,0,0.25);
+}
+/*紫色部分   结束*/
+/*内容    结束*/
+
+
+/*底部区域    开始*/
+footer{
+    background: #333;
+    color: #fff;
+    min-height: 200px;
+    text-align: center;
+}
+footer .share-group{
+    display: block;
+    width:1080px;
+    margin:0 auto;
+    padding:50px;
+}
+.share-group li{
+    display: inline-block;
+    padding:10px;
+}
+/*底部区域    结束*/
