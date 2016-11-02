@@ -9,6 +9,16 @@ $(function(){
     $('.supper-photo').click(function () {
         window.open('https://lanbingyoujing.github.io/test/html/supperPhoto/supperphoto.html');
     });
+
+    //跳转到kankan
+    $('.kankan').click(function () {
+        window.open('https://lanbingyoujing.github.io/test/html/kankan/kankan.html');
+    })
+
+
+
+
+
 });
 
 
